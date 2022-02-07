@@ -14,10 +14,8 @@ class Common {
     getExperience(startdate, enddate) {
         var startDate = moment(startdate, 'MM/DD/YYYY');
         var endDate = moment(enddate, 'MM/DD/YYYY');
-        var diffDays = endDate.diff(startDate, 'days');
-        var totalexperience = (diffDays / 365).toFixed(1);
-        var result = (totalexperience - Math.floor(totalexperience)) === 0 ? parseInt(totalexperience).toString() : totalexperience;
-        return result;
+        let experience = moment.preciseDiff(endDate, startDate, true);
+        return experience.years + "." + experience.months;
     }
 
     setExperience(list, value) {
