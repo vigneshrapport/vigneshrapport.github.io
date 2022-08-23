@@ -4,11 +4,12 @@ class Common {
 
     constructor() {
         this.totalExperience = this.getExperience('06/01/2015', new moment());
-        this.vssExperience = this.getExperience('06/01/2015', '05/31/2018');
-        this.sisExperience = this.getExperience('06/04/2018', '05/25/2020');
-        this.bbExperience = this.getExperience('06/01/2020', new moment());
+        // this.vssExperience = this.getExperience('06/01/2015', '05/31/2018');
+        // this.sisExperience = this.getExperience('06/04/2018', '05/25/2020');
+        // this.bbExperience1 = this.getExperience('06/01/2020', '03/31/2022');
+        this.bbExperience2 = this.getExperience('04/01/2022', new moment());
         this.setExperience(document.getElementsByClassName("totalExperence"), this.totalExperience);
-        this.setExperience(document.getElementsByClassName("bbExperence"), this.bbExperience);
+        this.setExperience(document.getElementsByClassName("bbExperence"), this.bbExperience2);
     }
 
     getExperience(startdate, enddate) {
