@@ -1,729 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Vignesh Arunachalam - Lead .NET Developer</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta name="Description" content="Portfolio website for Vignesh Arunachalam as a Web application developer with experience in .Net, C#,.Net Core, ASP.NET Core MVC, MS SQL Server, Microsoft Azure, HTML, CSS, JavaScript, jQuery">
-    <meta name="Keywords" content="Vignesh Arunachalam, Lead Web developer, .Net, C#, .Net Core, ASP.NET Core MVC,MS SQL Server, Microsoft Azure, HTML, CSS, JavaScript, jQuery">
-    <!-- custom-theme -->
-    <!-- Favicons -->
-    <link href="assets/img/favicon.jpg" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vignesh Arunachalam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .portfolio-card {
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #0077b5;
+    }
+
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      margin: 0.5rem 0 1.5rem;
+      font-size: 1rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .contact-link {
+      width: 140px;
+      color: #555;
+      background: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.6rem 1.2rem;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #0077b5;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      white-space: nowrap;
+      transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+
+    .contact-link:hover {
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+      color: #0077b5;
+      background-color: #e6f0fb;
+    }
+
+    .icon {
+      font-size: 20px;
+      color: inherit;
+      transition: transform 0.3s;
+    }
+
+    .contact-link:hover .icon {
+      transform: scale(1.2);
+      color: inherit;
+    }
+
+    /* Brand colors for icons */
+    .contact-link[title="Gmail"] .icon {
+      color: #ea4335;
+    }
+
+    .contact-link[title="LinkedIn"] .icon {
+      color: #0077b5;
+    }
+
+    .contact-link[title="WhatsApp"] .icon {
+      color: #25d366;
+    }
+
+    .contact-link[title="GitHub"] .icon {
+      color: #333;
+    }
+
+    .contact-link[title="Instagram"] .icon {
+      color: #fd1d1d;
+    }
+
+    .contact-link[title="Threads"] .icon {
+      color: #000;
+    }
+
+    .contact-link[title="Facebook"] .icon {
+      color: #1877f2;
+    }
+
+    .contact-link[title="X (Twitter)"] .icon {
+      color: #1da1f2;
+    }
+
+    .contact-link[title="Stack Overflow"] .icon {
+      color: #f48024;
+    }
+
+    /* Farewell message styles */
+    .farewell-message {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      color: #004a99;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: justify;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .farewell-message h2 {
+      margin-top: 0;
+      color: #0077b5;
+      font-size: 1.5rem;
+    }
+  </style>
+  <!-- FontAwesome CDN for official icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
+
 <body>
-    <!-- ======= Mobile nav toggle button ======= -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="d-flex flex-column">
-
-            <div class="profile">
-                <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light">Vignesh</h1>
-                <h1 class="text-light">Arunachalam</h1>
-                <div class="social-links mt-3 text-center">
-                    <a target="_blank" title="Follow me on Linkedin" href="https://www.linkedin.com/in/vignesh-arunachalam-60073b11b/"><i class="bx bxl-linkedin"></i></a>
-                    <a target="_blank" title="Check out my Repositories on GitHub" href="https://github.com/vigneshrapport/"><i class="bx bxl-github"></i></a>
-                    <a target="_blank" title="Text me on Skype" href="https://join.skype.com/invite/Ys1hOqaVoFZT"><i class="bx bxl-skype"></i></a>
-                    <a target="_blank" title="Connect me on Facebook" href="https://www.facebook.com/vignesh.arun.127/"><i class="bx bxl-facebook"></i></a>
-                    <a target="_blank" title="Follow me on Instagram" href="https://www.instagram.com/vigneshrapport/"><i class="bx bxl-instagram"></i></a>
-                </div>
-            </div>
-
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#education" class="nav-link scrollto"><i class="bx bxs-graduation"></i> <span>Education</span></a></li>
-                    <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Skills</span></a></li>
-                    <li><a href="#experiences" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experiences</span></a></li>
-                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Certificates</span></a></li>
-                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-                </ul>
-            </nav>
-            <!-- .nav-menu -->
-        </div>
-    </header>
-    <!-- End Header -->
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>
-                Vignesh Arunachalam
-                <span class="hero-qualification">
-                    <!-- M.C.A.,&nbsp;M.Phil.,&nbsp;<span style="text-decoration:overline">Ph.D.</span> -->
-                    M.C.A.,&nbsp;M.Phil.
-                </span>
-            </h1>
-            <p>
-                I'm <span class="typed" data-typed-items="Lead .NET Developer, Senior Software Engineer (.NET | .NET Core ), Web Application Developer,  Full Stack Developer , M.Phil. Graduate."></span>
-            </p>
-            <span>
-                <a href="#contact" class="btn-get-started">Hire Me</a>
-                <a href="assets/resume/Vignesh_Arunachalam_Senior_Software_Engineer.pdf" download class="btn-get-started">Download CV</a>
-            </span>
-        </div>
-    </section>
-    <!-- End Hero -->
-
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about section-bg">
-            <div class="container">
-                <div class="section-title">
-                    <h2>About</h2>
-                    <p>Hey there ! Thanks for visiting my website, I'm Vignesh Arunachalam, Lead .NET Developer. Born and brought up in Coimbatore, Tamilnadu, India. Now working and living in Bangalore, Karnataka, India.</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>Lead .NET Developer</h3>
-                        <p>As a software profession , I have <b> <span class="totalExperence"></span>&nbsp;+</b> years of experience in designing and developing web and desktop applications using Microsoft and open-source technologies.</p>
-                        <p>
-                            I have completed my Master’s degree <b>M.C.A.</b> (Master of Computer Applications) in Computer Applications from Sri Ramakrishna Mission Vidyalaya, Coimbatore in 2017, and completed <b>M.Phil.</b> (Masters of Philosophy) in Computer Science from same college in 2021 March.
-                            <!-- Now doing <b>Ph.D.</b> (Doctor of Philosophy) dissertation on Artificial Intelligence (AI) chatbot for Railway Train Enquires and Information using Machine Learning (ML).</p> -->
-                        <p>Now working as Lead .NET Application Developer in Bangalore, Karnataka, India and I’m familiar in developing web applications based on <b> .NET, C#, ASP.NET MVC, .NET Core, ASP.NET Core MVC, SQL Server, HTML, JavaScript, jQuery, CSS, Bootstrap, Material-UI, React-JS.</b></p>
-
-                        <div class="social-links mt-4">
-                            <a target="_blank" title="Follow me on Linkedin" href="https://www.linkedin.com/in/vignesh-arunachalam-60073b11b/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                            <a target="_blank" title="Check out my Repositories on GitHub" href="https://github.com/vigneshrapport/" class="github"><i class="bx bxl-github"></i></a>
-                            <a target="_blank" title="Text me on Skype" href="https://join.skype.com/invite/Ys1hOqaVoFZT" class="google-plus skype"><i class="bx bxl-skype"></i></a>
-                            <a target="_blank" title="Connect me on Facebook" href="https://www.facebook.com/vignesh.arun.127/" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a target="_blank" title="Follow me on Instagram" href="https://www.instagram.com/vigneshrapport/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a target="_blank" title="Text me on WhatsApp" href="http://wa.me/917502717940" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-                            <a target="_blank" title="Check out my Stack Overflow" href="https://stackoverflow.com/users/8220378/vignesh-arunachalam?tab=profile" class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
-                            <a target="_blank" title="Follow me on twitter" href="https://twitter.com/VigneshNcp/" class="twitter"><i class="bx bxl-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End About Section -->
-        <!-- ======= Education Section ======= -->
-        <section id="education" class="resume">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Education</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-up">
-
-                        <div class="resume-item">
-                            <h4>B.Sc. (Computer Science)</h4>
-                            <h5> 2012 - 2015</h5>
-                            <p><em><i class="bx bxs-graduation"></i>&nbsp;Sri Ramakrishna Mission Vidyalaya College of Arts and Science (Affiliated to Bharathiyar University), Coimbatore, Tamilnadu, India.</em></p>
-                            <p><i class="bi bi-trophy"></i>&nbsp;Graduated in <b><i>First Class with Distinction (D+)</i></b> with <b>81.59</b> %.</p>
-                            <p><b>Awards, Honours & Achievements &nbsp;:&nbsp;</b></p>
-                            <h5><i class="bi bi-award"></i>&nbsp;<b>Best Out Going Student</b> of the Year 2012-2015.</h5><br />
-                            <h5><i class="bi bi-award"></i>&nbsp;<b>1st Rank</b>&nbsp; holder of department of B.Sc.(Computer Science).</h5>
-                        </div>
-
-                        <div class="resume-item">
-                            <h4>M.C.A. (Computer Applications) </h4>
-                            <h5>2015 - 2017</h5>
-                            <p><em><i class="bx bxs-graduation"></i>&nbsp;Sri Ramakrishna Mission Vidyalaya College of Arts and Science (Affiliated to Bharathiyar University), Coimbatore, Tamilnadu, India.</em></p>
-                            <p><i class="bi bi-trophy"></i>&nbsp;Graduated in <b><i>First Class with Distinction (D+)</i></b> with & <b> 81.94</b> %.</p>
-                            <p><b>Awards, Honours & Achievements &nbsp;:&nbsp;</b></p>
-                            <h5><i class="bi bi-award"></i>&nbsp;<b>1st Rank</b>&nbsp; Holder of department of M.C.A. (Computer Applications).</h5>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up">
-
-                        <div class="resume-item">
-                            <h4>M.Phil. (Computer Science)  </h4>
-                            <h5>2017 - 2021</h5>
-                            <p><em><i class="bx bxs-graduation"></i>&nbsp;Sri Ramakrishna Mission Vidyalaya College of Arts and Science (Affiliated to Bharathiyar University), Coimbatore, Tamilnadu, India.</em></p>
-                            <p><i class="bi bi-trophy"></i>&nbsp;Graduated in <b><i>Second Class</i></b>.</p>
-                            <p>Submitted a dissertation entitled <b>“A Conversation User Interface (CUI) Chatbot for Railway Train Enquires and Information”</b> to Bharathiar University.</p>
-                            <p>Presented <b>International Conference paper </b> on Recent Trends in Advanced Computing –2019 (ICRTAC- 2019) at Erode, Tamilnadu, India with titled <b>“A Conversational User Interface (CUI) Chatbot Using Microsoft Bot Framework"</b>.</p>
-                        </div>
-
-                        <div class="resume-item">
-                            <!-- <h4>Ph.D. (Computer Science)</h4>
-                            <h5>2021 - Pursuing</h5>
-                            <p><em><i class="bx bxs-graduation"></i>&nbsp;Sri Ramakrishna Mission Vidyalaya College of Arts and Science (Affiliated to Bharathiyar University), Coimbatore, Tamilnadu, India.</em></p>
-                            <p> Doing dissertation on <b>Artificial Intelligence (AI) chatbot for Railway Train Enquires and Information using Machine Learning (ML)</b>.</p> -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Education Section -->
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Skills</h2>
-                </div>
-
-                <div class="row skills-content">
-                    <h5>Microsoft Technologies</h5>
-
-                    <div class="col-lg-6" data-aos="fade-up">
-
-                        <div class="progress">
-                            <span class="skill">.NET <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">.NET Core <i class="val">85%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">C# <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">WPF <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="progress">
-                            <span class="skill">ASP.NET MVC <i class="val">95%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">ASP.NET Core MVC <i class="val">95%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">ASP.NET <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h5>RDBMS</h5>
-                        <div class="progress">
-                            <span class="skill">Microsoft SQL Server <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">MySQL <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">MS Access <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h5>Scripting Languages</h5>
-                        <div class="progress">
-                            <span class="skill">jQuery <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Java Script<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">ReactJs <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h5>Source Control</h5>
-                        <div class="progress">
-                            <span class="skill">Tortoise SVN <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Visual Studio TFS<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Azure DevOps <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Source Tree <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h5>Business Exposure</h5>
-                        <div class="progress">
-                            <span class="skill">Security Information and Event Management (SIEM) <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Extract, Transform, Load (ETL) <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Textile (Garments)<i class="val">95%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Civil Construction <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h5>Other Familiar Technologies</h5>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="progress">
-                            <span class="skill">ElasticSearch & Logstash <i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">HTML & CSS & Bootstrap <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="progress">
-                            <span class="skill"> DevExpress Dashboard & DevExpress Report <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill"> Material-UI & Semantic-UI. <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Skills Section -->
-        <!-- ======= Professional Experience Section ======= -->
-        <section id="experiences" class="resume">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Professional Experience</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12" data-aos="fade-up">
-                        <h3 class="resume-title">Summary</h3>
-                        <div class="resume-item pb-0">
-                            <h4>Lead Developer</h4>
-                            <p><em><b> Software developer</b> with <b><span class="totalExperence"></span>&nbsp;+ </b>years of experience in designing and developing web and desktop applications using Microsoft and open source technologies.</em></p>
-                            <ul>
-                                <li>Involved software development with responsibilities of analysing, designing and developing web and desktop applications.</li>
-                                <li>Implementing various new features, analysing the bugs to identify the root cause &amp;  giving the solution, the enhancement or improving existing system by giving best solutions,Integrating various modules into the application. </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="resume-title">Professional Experience</h3>
-
-                        <div class="resume-item">
-                            <h5> Balfour Beatty Infrastructure India Private Limited - Bangalore , India.</h5>
-                            <h4>Lead Developer </h4> <p><em>April 2022 - Present (<span class="bbExperence"></span>&nbsp;+ Years)</em></p>
-                            <ul>
-                                <li>Working as Lead developer with responsibilities of writing testable, scalable, and efficient code.</li>
-                                <li>Reviewing developers code , pull requests and suggesting them if anything can be improved. </li>
-                                <li>Deploying application into various environments.</li>
-                                <li>Mentoring and helping team members to resolve issues and solve technical problems.</li>
-                            </ul>
-                            <h4>Application Developer</h4>
-                            <p><em>June 2020 - March 2022 (1.10 &nbsp;Years)</em></p>
-                            <ul>
-                                <li>Collaborating with UK team to get requirements, developing and delivering new features and enhancements.</li>
-                                <li>Implemented a new feature or upgrade an existing feature to meet the needs of the end user.</li>
-                                <li>Works independently when required.</li>
-                                <li>Continuously learning and improving skills.</li>
-                            </ul>
-                            <div class="award">
-                                <b>Awards, Honours & Achievements &nbsp;:&nbsp;</b><br />
-                                <h5> <i class="bi bi-trophy"></i>&nbsp; Nominated for first ever Balfour Beatty India Awards <b>"EDC Engineering Excellence Awards"</b> for 2021-Q4.</h5>
-                            </div>
-                        </div>
-
-                        <div class="resume-item">
-                            <h5>Sisa Information Security Private Limited - Bangalore , India.</h5>
-                            <h4>Associate Software Developer</h4>
-                            <p><em>June 2018 – May 2020 (2 Years)</em></p>
-                            <ul>
-                                <li>Involved software product development with responsibilities of analysing, designing, and developing web application. (<b>SIEM</b> tool)</li>
-                                <li>Implementing various new features.</li>
-                                <li>Analysing the bugs to identify the root cause &amp; giving the solutions.</li>
-                                <li>Implementing enhancement or improving existing system by giving best solutions.</li>
-                                <li>Integrating various third-party tools <b>(DevExpress Dashboard)</b> into the application and customizing certain logic according to current end user requirement.</li>
-                            </ul>
-                            <div class="award">
-                                <b>Awards , Honours & Achievements &nbsp;:&nbsp;</b><br />
-                                <h5> <i class="bi bi-trophy"></i>&nbsp; Got a <b>"Spot"</b> award for implementing <b>dynamic dashboards</b>  using <b>DevExpress Dashboard</b> for SISA EOT (SIEM tool) and threat hunting dashboards.</h5>
-                            </div>
-                        </div>
-
-                        <div class="resume-item">
-                            <h5>Valuesoft Solutions Private Limited - Bangalore , India.</h5>
-                            <h4>Junior Software Engineer</h4>
-                            <p><em>June 2015 – May 2018 (3 Years)</em></p>
-                            <ul>
-                                <li>Involved in the core behind coding of web and windows-based projects.</li>
-                                <li>Involved in analyzing, designing and developing web and windows based projects.</li>
-                                <li>Understanding the current system.</li>
-                                <li>Collecting the existing application difficulties and new expectations.</li>
-                            </ul>
-                            <div class="award">
-                                <b>Awards, Honours & Achievements &nbsp;:&nbsp;</b><br />
-                                <h5> <i class="bi bi-trophy"></i>&nbsp; Got a <b>"Best Performer"</b> award.</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Professional Experience Section -->
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Certificates</h2>
-                </div>
-
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-microsoft">Microsoft</li>
-                            <li data-filter=".filter-sclclg">School & College</li>
-                            <li data-filter=".filter-internationconference">International Conference</li>
-                            <li data-filter=".filter-udemy">Udemy</li>
-                            <li data-filter=".filter-sololearn">SoloLearn</li>
-                            <li data-filter=".filter-others">Seminar/Workshop</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-microsoft">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/microsoft/microsoft_digital_literacy_certificate_test.jpg" class="img-fluid" alt="Successfully passed Microsoft Digital Literacy Certificate Test">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/microsoft/microsoft_digital_literacy_certificate_test.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Successfully passed Microsoft Digital Literacy Certificate Test">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-sclclg">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/school_college/best_outgoing_student.jpg" class="img-fluid" alt="Best Outgoing Student of BSc (Computer Science) 2012-2015">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/school_college/best_outgoing_student.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Best Outgoing Student of BSc (Computer Science) 2012-2015">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-sclclg">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/school_college/rank_certificate.jpg" class="img-fluid" alt="1st Rank Holder of Department of BSc (Computer Science)">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/school_college/rank_certificate.jpg" data-gallery="portfolioGallery"
-                                   class="portfolio-lightbox" title="1st Rank Holder of Department of BSc (Computer Science)">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-sclclg">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/school_college/certificate_of_merit.jpg" class="img-fluid" alt="Certificate of Merit">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/school_college/certificate_of_merit.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Certificate of Merit">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-sclclg">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/school_college/ncc.jpg" class="img-fluid" alt="NCC">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/school_college/ncc.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="NCC">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-sclclg">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/school_college/sports_school.jpg" class="img-fluid" alt="Volleyball Winner - Red House">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/school_college/sports_school.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Volleyball Winner - Red House">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-internationconference">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/internation_conference/internation_conference_paper.jpg" class="img-fluid" alt="Presented International Conference paper on Recent Trends in Advanced Computing –2019 (ICRTAC- 2019) @ Erode with title A Conversational User Interface (CUI) Chatbot Using Microsoft Bot Framework">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/internation_conference/internation_conference_paper.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Presented International Conference paper on Recent Trends in Advanced Computing –2019 (ICRTAC- 2019) @ Erode with title A Conversational User Interface (CUI) Chatbot Using Microsoft Bot Framework">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-internationconference">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/internation_conference/internation_conference_college.jpg" class="img-fluid" alt="Participated in the Nation Conference on Emerging Computer Technology">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/internation_conference/internation_conference_college.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Participated in the Nation Conference on Emerging Computer Technology">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-sololearn">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/sololearn/reactjs.jpg" class="img-fluid" alt="Successfully completed React + Redux course">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/sololearn/reactjs.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Successfully completed React + Redux course">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-udemy">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/udemy/solid_principles.jpg" class="img-fluid" alt="Successfully completed SOLID Principles Introducing Software Architecture & Design course">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/udemy/solid_principles.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Successfully completed SOLID Principles Introducing Software Architecture & Design course">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-udemy">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/udemy/python_beginners_python3.jpg" class="img-fluid" alt="Successfully completed Python for Beginners Learn Python Programming (Python 3) course">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/udemy/python_beginners_python3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Successfully completed Python for Beginners Learn Python Programming (Python 3) course">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-udemy">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/udemy/python_apis_rest_framework.jpg" class="img-fluid" alt="Successfully completed  Creating Python APIs Like a BOSS - The Django REST Framework course">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/udemy/python_apis_rest_framework.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Successfully completed Creating Python APIs Like a BOSS - The Django REST Framework course">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/others/redhat_linux_workshop.jpg" class="img-fluid" alt="Successfully completed  Redhat Linux Workshop">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/others/redhat_linux_workshop.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Successfully completed  Redhat Linux Workshop">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Portfolio Section -->
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Contact Me</h2>
-                </div>
-
-                <div class="row" data-aos="fade-in">
-
-                    <div class="col-lg-12 d-flex align-items-stretch">
-                        <div class="info">
-                            <!--<div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Address</h4>
-                                <p>3/96 Nallichettipalayam &amp; (Post), Annur (Via), Coimbatore – 641653, Tamilnadu, India.</p>
-                            </div>-->
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <h4>Email</h4>
-                                <p>vigneshrapport@gmail.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="bi bi-phone"></i>
-                                <h4>Call Me</h4>
-                                <p>+91 7502717940 (What'sApp) <br />+91 7603872909</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Contact Section -->
-
-    </main>
-    <!-- End #main -->
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &nbsp;
-            </div>
-            <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
-    </footer>
-    <!-- End  Footer -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/common.js"></script>
-    <script src="assets/js/moment.js"></script>
-    <script src="assets/js/moment-precise-range.js"></script>
+  <div class="portfolio-card">
+    <img src="assets/img/profile_picture.jpg" alt="Profile Pic" class="profile-pic" />
+    <h1>Vignesh Arunachalam</h1>
+    <p>Engineering Manager</p>
+
+    <div class="contacts">
+
+      <a href="mailto:vigneshrapport@gmail.com" target="_blank" class="contact-link" title="Gmail">
+        <svg class="icon" viewBox="0 0 48 48" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="24" fill="#EA4335" />
+          <path fill="white"
+            d="M34 14H14c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V16c0-1.1-.9-2-2-2zm-1 4.2l-9 6.8-9-6.8V16l9 6.8L33 16v2.2z" />
+        </svg>
+        Gmail
+      </a>
+
+      <a href="https://www.linkedin.com/in/vignesh-arunachalam-60073b11b/" target="_blank" class="contact-link"
+        title="LinkedIn">
+        <i class="fab fa-linkedin icon"></i>
+        LinkedIn
+      </a>
+
+      <a href="https://wa.me/7502717940" target="_blank" class="contact-link" title="WhatsApp">
+        <i class="fab fa-whatsapp icon"></i>
+        WhatsApp
+      </a>
+
+      <a href="https://github.com/vigneshrapport" target="_blank" class="contact-link" title="GitHub">
+        <i class="fab fa-github icon"></i>
+        GitHub
+      </a>
+
+      <a href="https://instagram.com/vigneshrapport" target="_blank" class="contact-link" title="Instagram">
+        <i class="fab fa-instagram icon"></i>
+        Instagram
+      </a>
+
+      <a href="https://threads.com/vigneshrapport" target="_blank" class="contact-link" title="Threads">
+        <svg class="icon" viewBox="0 0 192 192" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="96" cy="96" r="96" fill="black" />
+          <path fill="white"
+            d="M136.9 86.4c-2.2-14.1-10.6-25.3-23.7-32.2-7.3-3.8-16.1-6.2-25.7-6.6-11.5-.4-22.2 1.9-31.1 6.6-10 5.3-17.6 13.3-22.2 23.5l20.4 9.2c3.2-7.2 8.1-12.6 14.4-16 5.1-2.7 11.4-4 18.2-3.7 6.7.2 12.7 1.7 17.7 4.5 6.6 3.6 10.5 8.8 11.6 15.6-10.8-.1-19.5 1.8-26.8 5.7-5.7 3.1-10.2 7.3-13.3 12.7-3.3 5.8-4.9 12.4-4.7 19.6.2 7.6 2.4 14.2 6.6 19.7 4.7 6.1 11.5 9.9 20.3 11.3 9.1 1.4 17.2-.4 24.3-5.1 6.5-4.4 11.3-11.5 13.9-20.9 2.1-7.8 2.5-16.3 1.5-26.9zM116.1 127c-1.4 5.1-3.9 8.6-7.4 11-3.2 2.2-7.2 3-11.6 2.3-3.9-.6-6.7-2.2-8.8-5.1-1.9-2.6-2.9-6.1-3-10.3-.1-4.1.8-7.5 2.6-10.6 1.8-3.1 4.6-5.6 8.2-7.6 3.9-2.2 9.1-3.3 15.7-3.2.1 8.6-.5 15.8-1.7 21.5z" />
+        </svg>
+        Threads
+      </a>
+
+      <a href="https://facebook.com/vignesh.arun.127" target="_blank" class="contact-link" title="Facebook">
+        <i class="fab fa-facebook-f icon"></i>
+        Facebook
+      </a>
+
+      <a href="https://twitter.com/vigneshncp" target="_blank" class="contact-link" title="X (Twitter)">
+        <svg class="icon" width="20" height="20" viewBox="0 0 1200 1227" xmlns="http://www.w3.org/2000/svg"
+          fill="black">
+          <path
+            d="M714.163 519.284L1160.89 0H1050.73L668.925 442.69 356.411 0H0l468.363 681.821L0 1226.64h110.163l402.055-465.303 331.899 465.303H1200L714.137 519.284h.026zM572.307 697.174l-46.562-65.199L151.018 79.59h163.55l298.241 417.972 46.562 65.199 398.847 559.65h-163.55L572.307 697.174z" />
+        </svg>
+        X (Twitter)
+      </a>
+
+      <a href="https://stackoverflow.com/users/8220378/vignesh-arunachalam" target="_blank" class="contact-link"
+        title="Stack Overflow">
+        <i class="fab fa-stack-overflow icon"></i>
+        Stack Overflow
+      </a>
+
+    </div>
+
+    <div class="farewell-message">
+      <h2>This isn't goodbye, it's just see you later!</h2>
+      <p>As I embark on a new chapter, I want to sincerely thank my colleagues and the entire organization for the
+        invaluable experiences and memories. It has been a truly rewarding journey working alongside such talented and
+        dedicated professionals.
+      </p>
+      <p>I look forward to staying connected and hope our paths cross again. Please feel free to reach out anytime!</p>
+      <p>Warm regards,<br /><strong>Vignesh Arunachalam</strong></p>
+    </div>
+  </div>
 
 </body>
+
 </html>
-<script>
-    new Common();
-</script>
